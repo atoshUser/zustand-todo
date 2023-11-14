@@ -1,0 +1,28 @@
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #3f72AF;
+  line-height: 1.2;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
