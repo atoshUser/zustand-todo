@@ -32,9 +32,13 @@ export const useStoreTodo = create<ITodoStore>()((set) => ({
         }))
     },
     removeTask : (id:string) =>{
-
+        set((state) => ({
+          tasks:state.tasks.filter((c) => c._id !== id)
+        }))
     },
     updateTask(id:string, str:string) {
-
+       set((state) => ({
+        tasks:state.tasks.map((c) => c._id === id ? {...c,title:str} : c)
+       }))
     },
 }))
