@@ -6,11 +6,14 @@ export interface IItemData {
 title:string
 createdAt:Date
 isCompleted:boolean
+
 }
 
 interface ITodoStore {
   tasks:IItemData[]
   completedDataArray:IItemData[]
+  // isEdit:boolean
+  // setEdit:() => void
   createTask:(str:string) => void
   updateTask:(id:string,str:string) => void
   removeTask:(id:string) => void
@@ -23,6 +26,13 @@ export const useStoreTodo = create<ITodoStore>()((set,get) => ({
 
     tasks:[],
   completedDataArray:[],
+  // isEdit:false,
+
+  //  setEdit :() => {
+  //     set((state) => ({
+  //        isEdit:!state.isEdit
+  //     }))
+  //  },
     createTask : (str:string) => {
 
       const data:IItemData = {
@@ -45,7 +55,8 @@ export const useStoreTodo = create<ITodoStore>()((set,get) => ({
     },
     updateTask(id:string, str:string) {
        set((state) => ({
-        tasks:state.tasks.map((c) => c._id === id ? {...c,title:str} : c)
+        tasks:state.tasks.map((c) => c._id === id ? {...c,title:str} : c),
+        isEdit:!state.isEdit
        }))
     },
     completedData:(completed:IItemData) => {

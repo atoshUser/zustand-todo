@@ -3,6 +3,7 @@ import styles from "./app.module.scss"
 import { useStoreTodo } from '../../data/stores/useTodoStore'
 import {useState,useCallback} from "react"
 import { Input, List } from '../components'
+import {useEffect} from "react"
 import { FaPlus } from "react-icons/fa";
 const App:React.FC = () => {
 
@@ -17,6 +18,12 @@ const App:React.FC = () => {
            setName('')
          }
  })
+
+
+
+
+
+
   return (
     <div className={styles.wrapper}>
        <article className={styles.articleWrapper}>
