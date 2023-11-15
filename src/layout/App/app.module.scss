@@ -26,7 +26,11 @@
   }
   &Text{
     border-top: 1px solid rgb(79, 77, 77);
-
+   padding: 10px 10px 25px;
+    > p{
+    text-align: center;
+      color: red;
+    }
   }
 }
 .wrapperInput{
@@ -49,4 +53,19 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 5px 15px;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+
+.completedTasks{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 20px;
+    > h2 {
+      text-align: center;
+      color: #333;
+    }
 }

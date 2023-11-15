@@ -1,0 +1,25 @@
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #334;
+ // border: 0.5px solid #555;
+ border: none;
+ border-radius: 5px;
+ font-size: 18px;
+ background-color: lightblue;
+padding: 5px 15px;
+
+> div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+}
+
+.inp{
+  display: flex;
+  width: 50px;
+  height: 25px;
+}
